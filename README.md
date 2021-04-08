@@ -2,7 +2,8 @@
 ```
 ├───components
 │   ├───button
-│   └───navbar
+│   └───navbar    
+├───different webpages
 ├───css
 ├───fonts
 ├───img
