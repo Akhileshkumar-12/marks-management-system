@@ -6,7 +6,7 @@ Folders Structure Used.
 ├───components
 │   ├───button
 │   └───navbar    
-├───different webpages
+├───pages
 ├───css
 ├───fonts
 ├───img
