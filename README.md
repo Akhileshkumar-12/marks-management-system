@@ -1,4 +1,7 @@
 # marks-management-system
+
+Folders Structure Used.
+
 ```
 ├───components
 │   ├───button
