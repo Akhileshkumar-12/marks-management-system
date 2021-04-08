@@ -1,8 +1,12 @@
 # marks-management-system
+
+Folders Structure Used.
+
 ```
 ├───components
 │   ├───button
-│   └───navbar
+│   └───navbar    
+├───pages
 ├───css
 ├───fonts
 ├───img

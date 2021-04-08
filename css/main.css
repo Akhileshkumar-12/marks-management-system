@@ -1,3 +1,4 @@
+
 .leftbox{
     float: left;
     width: 20%;
@@ -25,4 +26,17 @@
     padding-top: 2vh;
     background-color: #33C5FF;
      height: 60vh; 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+}
+
+.container {
+    
 }
