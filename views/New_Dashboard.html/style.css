@@ -1,0 +1,191 @@
+a, a:hover, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+   }
+.mainCard{
+    width:100%;
+    height:100%;
+    
+}
+.rightCard{
+    height: 100%;
+    /* width:18vw; */
+    
+   
+}
+.right{
+    height:100%;
+    
+}
+.profile{
+    height: 35vh;
+    background-color:  #FF6D33;
+    align-items: center;
+}
+.profileImg{
+    height: 150px;
+    width:150px;
+    border-radius: 50%;
+    
+}
+.profileText{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: large;
+    color: white;
+}
+.menu{
+    height: 65vh;
+    background-color: #33C5FF;
+    align-items: center;
+
+}
+.menuText{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 26px;
+line-height: 39px;
+color: rgba(255, 255, 255, 0.5);
+
+}
+.menuText:hover{
+             font-size: 28px;
+             
+             color: #FFFFFF;
+}
+.leftCard{
+    background-color: #F8F8F8;
+    margin-left: -25px;
+
+}
+
+.headBar{
+    background: #FFFFFF;
+    height: 6vh;
+    display: inline-block;
+    border-bottom: 2px #aaaaaa  solid;
+}
+.topBar{
+    Font-family: Poppins;
+    Font-style: Regular;
+    Font-size: 	1.8rem;
+   
+}
+.topBarImg{
+    height: 30px;
+    width: 30px;
+    
+}
+.progressCard{
+    display: flex;
+    flex-direction: row;
+}
+.progress1{
+    width: 30vw;
+    height: 39.787798408488065vh;
+    background-color: #CCCCCC;
+    opacity:  50%;
+    border-radius: 20px;
+    /* margin-right: 200px; */
+    
+}
+.progress2{
+    width:30vw;
+    height: 39.787798408488065vh;
+    background-color: #CCCCCC;
+    opacity:  50%;
+    border-radius: 20px;
+    
+    /* margin-left: 200px; */
+    
+}
+.progressGap{
+    width:4vw;
+  
+    background-color:transparent;
+    
+}
+.graphs{
+    width:52.083333333333336vw;
+    height:42.44031830238727vh;
+    background-color:#CCCCCC;
+    opacity:50%;
+    border-radius: 15px;
+    padding: 2px;
+}
+.progress1:hover, .progress2:hover, .graphs:hover{
+    border: 5px #12b3f3 solid;
+}
+/* @media only screen and (max-width: 900px) {
+    .rightCard {
+      width:28vw;
+    }
+  } */
+
+
+  @media only screen and (max-width: 740px) {
+      
+.progress1{
+    width: 250px;
+    height: 250px;
+    background-color: #CCCCCC;
+   
+    /* margin-right: 200px; */
+    
+}
+.progress2{
+    width:250px;
+    height: 250px;
+    background-color: #CCCCCC;
+ 
+    
+    /* margin-left: 200px; */
+    
+}
+.progressGap{
+    width:3vw;
+  
+    
+}
+.graphs{
+    width:400px;
+    height:250px;
+
+}
+    
+  }
+
+  @media only screen and (max-width: 643px) {
+
+    .profileImg{
+        height: 100px;
+        width: 100px;
+    }
+    .menu{
+        height: 75vh;
+    }
+      .progressCard{
+          flex-direction: column;
+      }
+    .progress1{
+        width: 300px;
+        height: 300px;
+        
+    }
+    .progress2{
+        width:300px;
+        height: 300px;
+        
+        
+    }
+    .progressGap{
+        height:3vh;
+        
+    }
+    .graphs{
+        width:400px;
+        height:300px;
+    }
+        
+      }
