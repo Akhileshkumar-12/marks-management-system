@@ -84,42 +84,24 @@ color: rgba(255, 255, 255, 0.5);
 .progress1{
     width: 30vw;
     height: 39.787798408488065vh;
-<<<<<<< HEAD
     background-color: #CCCCCC;
-=======
-    /* background-color: #CCCCCC; */
-    background: rgba(204, 204, 204, 0.5);
->>>>>>> 1a15284c410cf497d5aaa5b13cdadcff2288d4d5
     opacity:  50%;
     border-radius: 20px;
-    /* margin-right: 200px; */
-    
-}
+   }
 .progress2{
     width:30vw;
     height: 39.787798408488065vh;
-<<<<<<< HEAD
     background-color: #CCCCCC;
-=======
-    /* background-color: #CCCCCC; */
-    background: rgba(204, 204, 204, 0.5);
->>>>>>> 1a15284c410cf497d5aaa5b13cdadcff2288d4d5
     opacity:  50%;
-    border-radius: 20px;
-    
-    /* margin-left: 200px; */
-    
+    border-radius: 20px;   
 }
 .progressGap{
     width:4vw;
-  
     background-color:transparent;
-    
-}
+        }
 .graphs{
     width:52.083333333333336vw;
     height:42.44031830238727vh;
-<<<<<<< HEAD
     background-color:#CCCCCC;
     opacity:50%;
     border-radius: 15px;
@@ -128,15 +110,12 @@ color: rgba(255, 255, 255, 0.5);
 
 }
 .progress1:hover, .progress2:hover , .graphs:hover {
-=======
-    /* background-color:#CCCCCC; */
     background: rgba(204, 204, 204, 0.5);
     opacity:50%;
     border-radius: 15px;
     padding: 2px;
 }
 .progress1:hover, .progress2:hover, .graphs:hover{
->>>>>>> 1a15284c410cf497d5aaa5b13cdadcff2288d4d5
     border: 5px #12b3f3 solid;
 }
 
