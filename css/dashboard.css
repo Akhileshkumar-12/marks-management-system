@@ -87,18 +87,25 @@ color: rgba(255, 255, 255, 0.5);
     background-color: #CCCCCC;
     opacity:  50%;
     border-radius: 20px;
-   }
+    /* margin-right: 200px; */
+    
+}
 .progress2{
     width:30vw;
     height: 39.787798408488065vh;
     background-color: #CCCCCC;
     opacity:  50%;
-    border-radius: 20px;   
+    border-radius: 20px;
+    
+    /* margin-left: 200px; */
+    
 }
 .progressGap{
     width:4vw;
+  
     background-color:transparent;
-        }
+    
+}
 .graphs{
     width:52.083333333333336vw;
     height:42.44031830238727vh;
@@ -110,12 +117,6 @@ color: rgba(255, 255, 255, 0.5);
 
 }
 .progress1:hover, .progress2:hover , .graphs:hover {
-    background: rgba(204, 204, 204, 0.5);
-    opacity:50%;
-    border-radius: 15px;
-    padding: 2px;
-}
-.progress1:hover, .progress2:hover, .graphs:hover{
     border: 5px #12b3f3 solid;
 }
 
