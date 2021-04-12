@@ -1,47 +1,47 @@
 a, a:hover, a:visited, a:active {
-    color: inherit;
-    text-decoration: none;
-   }
+  color: inherit;
+  text-decoration: none;
+ }
 .mainCard{
-    width:100%;
-    height:100%;
-    
+  width:100%;
+  height:100%;
+  
 }
 .rightCard{
-    height: 100%;
-    /* width:18vw; */
-    
-   
+  height: 100%;
+  /* width:18vw; */
+  
+ 
 }
 .right{
-    height:100%;
-    
+  height:100%;
+  
 }
 .profile{
-    height: 35vh;
-    background-color:  #FF6D33;
-    align-items: center;
+  height: 35vh;
+  background-color:  #FF6D33;
+  align-items: center;
 }
 .profileImg{
-    height: 150px;
-    width:150px;
-    border-radius: 50%;
-    
+  height: 150px;
+  width:150px;
+  border-radius: 50%;
+  
 }
 .profileText{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 200;
-    font-size: large;
-    color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  font-size: large;
+  color: white;
 }
 .menu{
-    height: 65vh;
-    background-color: #33C5FF;
-    align-items: center;
+  height: 65vh;
+  background-color: #33C5FF;
+  align-items: center;
 
 }
 .menuText{
-    font-family: Poppins;
+  font-family: Poppins;
 font-style: normal;
 font-weight: normal;
 font-size: 26px;
@@ -50,73 +50,73 @@ color: rgba(255, 255, 255, 0.5);
 
 }
 .menuText:hover{
-             font-size: 28px;
-             
-             color: #FFFFFF;
+           font-size: 28px;
+           
+           color: #FFFFFF;
 }
 .leftCard{
-    background-color: #F8F8F8;
-    margin-left: -25px;
+  background-color: #F8F8F8;
+  margin-left: -25px;
 
 }
 
 .headBar{
-    background: #FFFFFF;
-    height: 6vh;
-    display: inline-block;
-    border-bottom: 2px #aaaaaa  solid;
+  background: #FFFFFF;
+  height: 6vh;
+  display: inline-block;
+  border-bottom: 2px #aaaaaa  solid;
 }
 .topBar{
-    Font-family: Poppins;
-    Font-style: Regular;
-    Font-size: 	1.8rem;
-   
+  Font-family: Poppins;
+  Font-style: Regular;
+  Font-size: 	1.8rem;
+ 
 }
 .topBarImg{
-    height: 30px;
-    width: 30px;
-    
+  height: 30px;
+  width: 30px;
+  
 }
 .progressCard{
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .progress1{
-    width: 30vw;
-    height: 39.787798408488065vh;
-    background: rgba(204, 204, 204, 0.5);
-    opacity:  50%;
-    border-radius: 20px;
-    /* margin-right: 200px; */
-    
+  width: 30vw;
+  height: 39.787798408488065vh;
+  background: rgba(204, 204, 204, 0.5);
+  opacity:  50%;
+  border-radius: 20px;
+  /* margin-right: 200px; */
+  
 }
 /* .progress2{
-    width:30vw;
-    height: 39.787798408488065vh;
-    background: rgba(204, 204, 204, 0.5);
-    opacity:  50%;
-    border-radius: 20px;
-    
-    
+  width:30vw;
+  height: 39.787798408488065vh;
+  background: rgba(204, 204, 204, 0.5);
+  opacity:  50%;
+  border-radius: 20px;
+  
+  
 } */
 .progressGap{
-    width:4vw;
+  width:4vw;
+
+  background-color:transparent;
   
-    background-color:transparent;
-    
 }
 .graphs{
-    width:52.083333333333336vw;
-    height:42.44031830238727vh;
-    background: rgba(204, 204, 204, 0.5);
-    opacity:50%;
-    border-radius: 15px;
-    padding: 2px;
-    border: 5px #CCCCCC  solid;
+  width:52.083333333333336vw;
+  height:42.44031830238727vh;
+  background: rgba(204, 204, 204, 0.5);
+  opacity:50%;
+  border-radius: 15px;
+  padding: 2px;
+  border: 5px #CCCCCC  solid;
 
 }
 .progress1:hover, .graphs:hover {
-    border: 5px #12b3f3 solid;
+  border: 5px #12b3f3 solid;
 }
 
 
@@ -129,158 +129,158 @@ color: rgba(255, 255, 255, 0.5);
 
 
 .set-size {
-    font-size: 10em;
-  }
-  
-  .charts-container:after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-  
-  .pie-wrapper {
-    height: 1em;
-    width: 1em;
-    float: left;
-    margin: 15px;
-    position: relative;
-  }
-  .pie-wrapper:nth-child(3n+1) {
-    clear: both;
-  }
-  .pie-wrapper .pie {
-    height: 100%;
-    width: 100%;
-    clip: rect(0, 1em, 1em, 0.5em);
-    left: 0;
-    position: absolute;
-    top: 0;
-  }
-  .pie-wrapper .pie .half-circle {
-    height: 100%;
-    width: 100%;
-    border: 0.1em solid #3498db;
-    border-radius: 50%;
-    clip: rect(0, 0.5em, 1em, 0);
-    left: 0;
-    position: absolute;
-    top: 0;
-  }
-  .pie-wrapper .label {
-    background: #34495e;
-    border-radius: 50%;
-    bottom: 0.4em;
-    color:  #FF6D33;
-    cursor: default;
-    display: block;
-    font-size: 0.25em;
-    left: 0.4em;
-    line-height: 2.8em;
-    position: absolute;
-    right: 0.4em;
-    text-align: center;
-    top: 0.4em;
-  }
-  .pie-wrapper .label .smaller {
-    color:  #FF6D33;
-    font-size: 0.45em;
-    padding-bottom: 20px;
-    vertical-align: super;
-  }
-  .pie-wrapper .shadow {
-    height: 100%;
-    width: 100%;
-    border: 0.1em solid #8a8b8b;
-    border-radius: 50%;
-  }
-  .pie-wrapper.style-2 .label {
-    background: none;
-    color:  #FF6D33;
-    opacity: 100%;
-  }
-  .pie-wrapper.style-2 .label .smaller {
-    color:  #FF6D33;
-    opacity: 100%;
-  }
-  
-  
-  .pie-wrapper.progress-45 .pie .half-circle {
-    border-color: #FF6D33;
-  }
-  .pie-wrapper.progress-45 .pie .left-side {
-    transform: rotate(60deg);
-  }
-  .pie-wrapper.progress-45 .pie .right-side {
-    display: none;
-  }
-  
+  font-size: 10em;
+}
+
+.charts-container:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.pie-wrapper {
+  height: 1em;
+  width: 1em;
+  float: left;
+  margin: 15px;
+  position: relative;
+}
+.pie-wrapper:nth-child(3n+1) {
+  clear: both;
+}
+.pie-wrapper .pie {
+  height: 100%;
+  width: 100%;
+  clip: rect(0, 1em, 1em, 0.5em);
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.pie-wrapper .pie .half-circle {
+  height: 100%;
+  width: 100%;
+  border: 0.1em solid #3498db;
+  border-radius: 50%;
+  clip: rect(0, 0.5em, 1em, 0);
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.pie-wrapper .label {
+  background: #34495e;
+  border-radius: 50%;
+  bottom: 0.4em;
+  color:  #FF6D33;
+  cursor: default;
+  display: block;
+  font-size: 0.25em;
+  left: 0.4em;
+  line-height: 2.8em;
+  position: absolute;
+  right: 0.4em;
+  text-align: center;
+  top: 0.4em;
+}
+.pie-wrapper .label .smaller {
+  color:  #FF6D33;
+  font-size: 0.45em;
+  padding-bottom: 20px;
+  vertical-align: super;
+}
+.pie-wrapper .shadow {
+  height: 100%;
+  width: 100%;
+  border: 0.1em solid #8a8b8b;
+  border-radius: 50%;
+}
+.pie-wrapper.style-2 .label {
+  background: none;
+  color:  #FF6D33;
+  opacity: 100%;
+}
+.pie-wrapper.style-2 .label .smaller {
+  color:  #FF6D33;
+  opacity: 100%;
+}
+
+
+.pie-wrapper.progress-45 .pie .half-circle {
+  border-color: #FF6D33;
+}
+.pie-wrapper.progress-45 .pie .left-side {
+  transform: rotate(60deg);
+}
+.pie-wrapper.progress-45 .pie .right-side {
+  display: none;
+}
+
 /* @media only screen and (max-width: 900px) {
-    .rightCard {
-      width:28vw;
-    }
-  } */
+  .rightCard {
+    width:28vw;
+  }
+} */
 
 
-  @media only screen and (max-width: 740px) {
-      
+@media only screen and (max-width: 740px) {
+    
 .progress1{
-    width: 250px;
-    height: 250px;
-    
-    /* margin-right: 200px; */
-    
+  width: 250px;
+  height: 250px;
+  
+  /* margin-right: 200px; */
+  
 }
 .progress2{
-    width:250px;
-    height: 250px;
- 
-    
-    /* margin-left: 200px; */
-    
+  width:250px;
+  height: 250px;
+
+  
+  /* margin-left: 200px; */
+  
 }
 .progressGap{
-    width:3vw;
+  width:3vw;
+
   
-    
 }
 .graphs{
-    width:400px;
-    height:250px;
+  width:400px;
+  height:250px;
 
 }
-    
+  
+}
+
+@media only screen and (max-width: 643px) {
+
+  .profileImg{
+      height: 100px;
+      width: 100px;
   }
-
-  @media only screen and (max-width: 643px) {
-
-    .profileImg{
-        height: 100px;
-        width: 100px;
+  .menu{
+      height: 75vh;
+  }
+    .progressCard{
+        flex-direction: column;
     }
-    .menu{
-        height: 75vh;
+  .progress1{
+      width: 300px;
+      height: 300px;
+      
+  }
+  .progress2{
+      width:300px;
+      height: 300px;
+      
+      
+  }
+  .progressGap{
+      height:3vh;
+      
+  }
+  .graphs{
+      width:400px;
+      height:300px;
+  }
+      
     }
-      .progressCard{
-          flex-direction: column;
-      }
-    .progress1{
-        width: 300px;
-        height: 300px;
-        
-    }
-    .progress2{
-        width:300px;
-        height: 300px;
-        
-        
-    }
-    .progressGap{
-        height:3vh;
-        
-    }
-    .graphs{
-        width:400px;
-        height:300px;
-    }
-        
-      }
