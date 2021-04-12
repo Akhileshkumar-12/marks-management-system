@@ -113,8 +113,10 @@ color: rgba(255, 255, 255, 0.5);
     opacity:50%;
     border-radius: 15px;
     padding: 2px;
+    border: 5px #CCCCCC  solid;
+
 }
-.progress1:hover, .progress2:hover, .graphs:hover{
+.progress1:hover, .progress2:hover , .graphs:hover {
     border: 5px #12b3f3 solid;
 }
 
