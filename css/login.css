@@ -3,7 +3,7 @@
 .body{
   	background-repeat: no-repeat;
   	background-size: cover;
-  	background: white;
+  	background: #48c9b0;
   	font-family: "Roboto", sans-serif;
   	display: block; 
   	margin: 1.5%;
@@ -31,7 +31,7 @@
   	position: relative;
   	right: 20px;
   	z-index: 1;
-  	background: #48c9b0;
+  	background: white;
   	max-width: 250px;
   	margin: auto; 
   	padding: 15px 50px 20px 50px;
