@@ -230,14 +230,7 @@ color: rgba(255, 255, 255, 0.5);
   /* margin-right: 200px; */
   
 }
-.progress2{
-  width:250px;
-  height: 250px;
 
-  
-  /* margin-left: 200px; */
-  
-}
 .progressGap{
   width:3vw;
 
@@ -284,3 +277,33 @@ color: rgba(255, 255, 255, 0.5);
   }
       
     }
+    .progress2{
+   
+      height: 30vh;
+      background: rgba(204, 204, 204, 0.5);
+      /* opacity:  50%; */
+      border: 2px solid whitesmoke;
+      border-radius: 5px;
+      /* margin-right: 200px; */
+      
+  }
+  .progressText{
+      font-size: 1.2rem;
+  }
+  .subjectCode{
+      height: 10vh;
+      background: rgba(240, 240, 240, 0.5);
+      /* opacity:  50%; */
+      border: 2px solid white;
+    
+  
+  }
+  .selectedSubjectCode{
+      border-bottom: tomato 2px solid;
+  }
+  .subName{
+      font-size: 1.2rem;
+      font-weight: 400;
+  }
+  
+  
