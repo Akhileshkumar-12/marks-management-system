@@ -32,38 +32,95 @@
                 </div>
                 <div class="d-flex flex-column d-block justify-content-between align-items-center cards">
                         <div class="m-4 progressCard">
-                            <form action="" method="POST">
-                                    <div class="row" style="border: 2px solid black;">
-                                        <div class="col-xl-3 col-m-3 col-sm-6 col-xs-6">
-                                            <input type="text" placeholder="Roll NO." name="fname">
-                                        </div>
-                                        <div class="col-xl-3 col-m-3 col-sm-6 col-xs-6">
-                                            <input type="text" placeholder="Subcode"  name="lname">
-                                        </div>
-                                        <div class="col-xl-3 col-m-3 col-sm-6 col-xs-6">
-                                            <input type="text" placeholder="Assignment1"  name="lname">
-                                        </div>
-                                        <div class="col-xl-3 col-m-3 col-sm-6 col-xs-6">
-                                            <input type="text" placeholder="Assignment2"  name="lname">
-                                        </div>
-                                        <div class="col-xl-3 col-m-3 col-sm-6 col-xs-6">
-                                            <input type="text" placeholder="test1"  name="lname">
-                                        </div>
-                                        <div class="col-xl-3 col-m-3 col-sm-6 col-xs-6">
-                                            <input type="text" placeholder="test2"  name="lname">
-                                        </div>
-                                        <div class="col-xl-3 col-m-3 col-sm-6 col-xs-6">
-                                            <input type="text" placeholder="midterm"  name="lname">
-                                        </div>
-                                        <div class="col-xl-3 col-m-3 col-sm-6 col-xs-6">
-                                            <input type="text" placeholder="endterm"  name="lname">
-                                        </div>
-
-                                        <input type="submit" value="Save">
+                            
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-3 p-1">
+                                        <label for="validationDefault02" class="p-1">Enrollement Number</label>
+                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Enrollement Number" value="" required>
                                     </div>
+                                    <div class="col-md-6 mb-3 p-1">
+                                        <label for="validationDefault02" class="p-1">Subject Code</label>
+                                        <input type="text" class="form-control" id="validationDefault02" placeholder="CSXXX" value="" required>
+                                    </div>
+                                
+                                </div>
+                                <div class="form-row">
+                                  <div class="col-md-4 mb-3 p-1">
+                                    <label for="validationDefault01" class="p-1">Assignment1</label>
+                                    <input type="text" class="form-control" id="validationDefault01" placeholder="Assignment1" value="" required>
+                                  </div>
+                                  <div class="col-md-4 mb-3 p-1">
+                                    <label for="validationDefault02" class="p-1">Class test1</label>
+                                    <input type="text" class="form-control" id="validationDefault02" placeholder="Marks obtained in class test " value="" required>
+                                  </div>
+                                  <div class="col-md-4 mb-3 p-1" >
+                                    <label for="validationDefault02" class="p-1">Mid Term</label>
+                                    <input type="text" class="form-control" id="validationDefault02" placeholder="Marks Obtained in Mid term " value="" required>
+                                  </div>
+                                 
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3 p-1">
+                                        <label for="validationDefault02" class="p-1">Assignment2</label>
+                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Assignment2" value="" required>
+                                    </div>
+                                    <div class="col-md-4 mb-3 p-1" >
+                                        <label for="validationDefault02" class="p-1">Class Test2</label>
+                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Class Test2" value="" required>
+                                    </div>
+                                    <div class="col-md-4 mb-3 p-1">
+                                        <label for="validationDefault02" class="p-1">EndTerm</label>
+                                        <input type="text" class="form-control" id="validationDefault02" placeholder="End Term" value="" required>
+                                    </div>
+                                </div>
+                              
+                                <center><button class="btn btn-primary btn-block" type="submit">Save</button></center>
                             </form>
                         </div>
-                        
+                        <div class="col-11 m-4 progressCard">
+                            <table class="table table-striped table-hover">
+                                <thead class="thead-dark">
+                                  <tr>
+                                    <th scope="col">Roll No.</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Assignment1</th>
+                                    <th scope="col">Assignment2</th>
+                                    <th scope="col">Class Test 1</th>
+                                    <th scope="col">ClassTest2</th>
+                                    <th scope="col">MidTerm</th>
+                                    <th scope="col">EndTerm</th>
+                                    <th scope="col">Total</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                        </div>
                 </div>
             </div>
         </div>
