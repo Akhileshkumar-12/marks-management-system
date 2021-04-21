@@ -5,6 +5,8 @@ def dashboard(request):
 def reportCard(request):
     return render(request,'ReportCard.html')
 def login(request):
+    # if request.method == 'POST':
+       
     return render(request,'login.html')
 def facultydashboard(request):
     return render(request,'facultydashboard.html')
