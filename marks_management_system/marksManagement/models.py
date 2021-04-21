@@ -13,6 +13,9 @@ class Faculty(models.Model):
     subjectName = models.CharField(max_length=50)
     subjectCode = models.CharField(max_length=20)
 
+    def __str__(self):
+        return self.fId
+
 class Subject(models.Model):
     rollNo =models.CharField(max_length=8 , unique=False)
     subjectCode = models.CharField(max_length=20 , unique=False)
@@ -22,5 +25,7 @@ class Subject(models.Model):
     classtest2 = models.FloatField(default=0.00)
     midTerm =models.FloatField(default=0.00)
     endTerm = models.FloatField(default=0.00)
+    def __str__(self):
+        return self.subjectCode +" "+ self.rollNo
     
 
