@@ -6,4 +6,6 @@ def reportCard(request):
     return render(request,'ReportCard.html')
 def login(request):
     return render(request,'login.html')
+def facultydashboard(request):
+    return render(request,'facultydashboard.html')
 # Create your views here.
