@@ -53,15 +53,18 @@
                     </div>
                 </div>
                 <div class="row ml-1">
+                    
+                    {% for data in subdata.all %}
+                    
+                    
                     <div class="subjectCode col-2 d-flex flex-column justify-content-center align-items-center selectedSubjectCode ">
-                        <div class="subName pb-2"><h5>CS302</h5></div>   
-                    </div>   
-                    <div class="subjectCode col-2 d-flex flex-column justify-content-center align-items-center ">
-                        <div class="subName pb-2"><h5>HS392</h5></div>   
+                        <a href="{% url 'reportCard' usersub='CS302' %}"><div class="subName pb-2"><h5>{{ data.subjectCode }}</h5></div> </a>  
+                    </div> 
+                    {% endfor %} 
+                    <!-- <div class="subjectCode col-2 d-flex flex-column justify-content-center align-items-center ">
+                       <a ><div class="subName pb-2"><h5>HS392</h5></div> </a> 
                     </div>  
-                    <div class="subjectCode col-2 d-flex flex-column justify-content-center align-items-center ">
-                        <div class="subName pb-2"><h5>CS304</h5></div>   
-                    </div>  
+                     
                     <div class="subjectCode col-2 d-flex flex-column justify-content-center align-items-center ">
                         <div class="subName pb-2"><h5>CS306</h5></div>   
                     </div>  
@@ -70,7 +73,7 @@
                     </div>  
                     <div class="subjectCode col-2 d-flex flex-column justify-content-center align-items-center ">
                         <div class="subName pb-2"><h5>CS322</h5></div>   
-                    </div>  
+                    </div>   -->
                 </div>
                 <div class="row m-2 p-2 d-flex align-items-center">
                        <div class="ml-4" style="font-size:1.6rem;">Software Engineering</div>

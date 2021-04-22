@@ -5,7 +5,9 @@ urlpatterns = [
     # path('', include('home.urls')),
    path('',views.login,name='login'),
    path('stdashboard',views.dashboard,name='dashboard'),
-   path('reportCard',views.reportCard,name='reportCard'),
+   path('reportCard/<str:usersub>',views.reportCard,name='reportCard'),
    
    path('facultydashboard',views.facultydashboard,name='facultydashboard'),
 ]
+
+# /<str:user>/
