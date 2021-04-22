@@ -14,7 +14,7 @@
                      <div class="d-flex flex-column justify-content-center align-text-center d-block menu">
                             <p class="menuText p-2"><a href="{% url 'dashboard' %}">DashBoard</a></p>
                             <p class="menuText p-2"><a href="#">Activities</a></p>
-                            <p class="menuText p-2"><a href="{% url 'reportCard' %}">Report Card</a></p>
+                            <p class="menuText p-2"><a href="{% url 'reportCard' usersub='abc'%">Report Card</a></p>
                             <p class="menuText p-2"><a href="#">curriculum</a></p>
                      </div>
                 </div>
@@ -22,7 +22,7 @@
             <div class="col p-0 leftcard ">
                 
                 <div class=" ml-0 d-block d-flex flex-row justify-content-between p-1 headBar">
-                        <div class=" topBar ">Subject Name</div>
+                        <div class=" topBar ">{{ subname.subjectName }}</div>
                         <div class=" topBar">
                             <a href="" class="href"><img src="{% static 'media/Vector.png' %}" alt=" " class="pb-2 pr-2 topBarImg"></a>
                             <a href=""><img src="{% static '/media/carbon_settings.png' %}" alt="" class="pb-2 pl-2 topBarImg"></a>
@@ -58,7 +58,7 @@
                     
                     
                     <div class="subjectCode col-2 d-flex flex-column justify-content-center align-items-center selectedSubjectCode ">
-                        <a href="{% url 'reportCard' usersub='CS302' %}"><div class="subName pb-2"><h5>{{ data.subjectCode }}</h5></div> </a>  
+                        <a href="{% url 'reportCard' usersub=data.subjectCode %}"><div class="subName pb-2"><h5>{{ data.subjectCode }}</h5></div> </a>  
                     </div> 
                     {% endfor %} 
                     <!-- <div class="subjectCode col-2 d-flex flex-column justify-content-center align-items-center ">
@@ -75,9 +75,9 @@
                         <div class="subName pb-2"><h5>CS322</h5></div>   
                     </div>   -->
                 </div>
-                <div class="row m-2 p-2 d-flex align-items-center">
-                       <div class="ml-4" style="font-size:1.6rem;">Software Engineering</div>
-                       </div>
+                <!-- <div class="row m-2 p-2 d-flex align-items-center">
+                       <div class="ml-4" style="font-size:1.6rem;">{{ marksdata.subjectCode }}</div>
+                       </div> -->
                        <hr>
                 
                 <div class="row">
@@ -95,38 +95,38 @@
                                 <tr>
                                     <th scope="row">Assignment 1</th>
                                     <td>5%</td>
-                                    <td>0</td>
+                                    <td>{{ marksdata.assignment1 }}</td>
                                     <td>0</td>
                                   </tr>
                               <tr>
                                 <th scope="row">Assignment 2</th>
                                 <td>5%</td>
-                                <td>0</td>
+                                <td>{{ marksdata.assignment2 }}</td>
                                 <td>0</td>
                               </tr>
                               <tr>
                                 <th scope="row">Test 1</th>
                                 <td>7.5%</td>
-                                <td>0</td>
+                                <td>{{ marksdata.classtest1 }}</td>
                                 <td>0</td>
                               </tr>
                               <tr>
                                 <th scope="row">Test 2</th>
                                 <td>7.5%</td>
-                                <td>0</td>
+                                <td>{{ marksdata.classtest2 }}</td>
                                 <td>0</td>
                               </tr>
 
                               <tr>
                                 <th scope="row">Mid Term</th>
                                 <td>25%</td>
-                                <td>0</td>
+                                <td>{{ marksdata.midTerm }}</td>
                                 <td>0</td>
                               </tr>
                               <tr>
                                 <th scope="row">End Term</th>
                                 <td>50%</td>
-                                <td>0</td>
+                                <td>{{ marksdata.endTerm }}</td>
                                 <td>0</td>
                               </tr>
                             </tbody>

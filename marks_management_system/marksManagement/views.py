@@ -6,16 +6,16 @@ def dashboard(request):
     return render(request,'NewDashboard.html',{'data':st_data})
 
 
-def reportCard(request):
+def reportCard(request,usersub):
     st_data=Student.objects.get(roll_no=st_id)
     st_sub=Subject.objects.filter(rollNo=st_id)
-    # if usersub==0:
-    #     marksdata=Subject.objects.get(rollNo=st_id , subjectCode=st_sub[0].subjectCode)
-    # else:
-    # marksdata=Subject.objects.get(rollNo=st_id, subjectCode=usersub)
-    # for i in st_sub:
-    #     print(i.subjectCode)
-    return render(request,'ReportCard.html',{'data':st_data,'subdata':st_sub,'marksdata':marksdata})
+    if usersub=='abc':
+        marksdata=Subject.objects.get(rollNo=st_id , subjectCode=st_sub[0].subjectCode)
+        subname=Faculty.objects.get(subjectCode=st_sub[0].subjectCode)
+    else:
+        marksdata=Subject.objects.get(rollNo=st_id, subjectCode=usersub)
+        subname=Faculty.objects.get(subjectCode=usersub)
+    return render(request,'ReportCard.html',{'data':st_data,'subdata':st_sub,'marksdata':marksdata,'subname':subname})
 
 
 def login(request):
