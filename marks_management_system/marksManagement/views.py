@@ -27,21 +27,27 @@ def login(request):
        error = ""
        pwd=request.POST['password']
        if Student.objects.filter(roll_no=roll,password=pwd):
-           error = "success"
+           error += "success"
+           
            return dashboard(request)
        else:
            error +="Try again"
+           
     return render(request,'login.html',{'error':error})
 
 def loginAsFaculty(request):
+    error =""
     if request.method == 'POST':
        Faculty_Id = request.POST['Faculty_Id']
        global f_id   #f_id is the id of the logged in Faculty used in other templates (until logged out)
        f_id=Faculty_Id 
        pwd=request.POST['password']
        if Faculty.objects.filter(fId=Faculty_Id,password=pwd):
+           error = "success"
            return facultydashboard(request)
-    return render(request,'loginAsfaculty.html')
+       else:
+           error +="Try again"
+    return render(request,'loginAsfaculty.html',{'error':error})
 
 def facultydashboard(request):
     facultyitem = Faculty.objects.get(fId=f_id)
