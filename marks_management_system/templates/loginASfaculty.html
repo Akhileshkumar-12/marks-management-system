@@ -1,0 +1,16 @@
+{% extends 'login.html' %}
+{% load static %}
+
+{% block content %}
+{% if error == "Try again" %}
+	<script> alert("Error Ocuured!! Try Again");</script>
+{% endif %}
+<form action="{%url 'loginFaculty'   %}" method="POST">
+					      {% csrf_token %}
+				      	<input type="text" placeholder="&#xf007;" value="" name="Faculty_Id"></input>
+      			    	<input type="password" placeholder="&#xf023;" name="password"/>
+      			     	<button>LOGIN</button>
+					
+      			    	<p class="message"></p>
+    			      </form>
+{% endblock %}

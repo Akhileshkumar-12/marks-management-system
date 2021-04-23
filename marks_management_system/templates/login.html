@@ -18,17 +18,30 @@
 	<!--The LOGIN Division-->
   		<div class="form">
 
-    			<form action="{%url 'login' %}" method="POST">
+    			
       				<h1>LOG IN</h1>
       				<lottie-player src="https://assets4.lottiefiles.com/datafiles/XRVoUu3IX4sGWtiC3MPpFnJvZNq7lVWDCa8LSqgS/profile.json"  background="transparent"  speed="1"  style="justify-content: center;" loop  autoplay></lottie-player>
-					  <label class="checkbox-inline"><input type="checkbox" value="">Faculty Member</label>
-					  <label class="checkbox-inline"><input type="checkbox" value="">Student</label>
+					  <div class=" signIN">
+						<div class=" texxt" style="margin-bottom: 5px; color: cadetblue; font-size: smaller;">
+							Login As &nbsp;&nbsp;
+						<a href="{% url 'login' %}" class="m-1 signAsStudent" style="text-decoration: none; font-size:small; font-weight: 400; color: #FF6D33;">Student</a>
+					       /
+						<a href="{% url 'loginFaculty' %}" class="m-1 signAsFaculty" style=" padding-bottom: 4px; text-decoration: none; font-size:small; font-weight: 400; color: #FF6D33;">Faculty</a>
+					</div>
+					  
+					</div>
+					  {% block content %}
+					  {% if error == "Try again" %}
+					     <script> alert("Error Ocuured!! Try Again");</script>
+					  {% endif %}
+					  <form action="{%url 'login' %}" method="POST">
 					  {% csrf_token %}
 					<input type="text" placeholder="&#xf007;" value="" name="Roll_No"></input>
       				<input type="password" placeholder="&#xf023;" name="password"/>
       				<button>LOGIN</button>
       				<p class="message"></p>
     				</form>
+					{% endblock %}
 
     			<!-- <form class="login-form">
       				<button type="button" onclick="window.location.href='signup.html'">SIGN UP</button>

@@ -94,30 +94,19 @@
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                  </tr>
+                                 {% for data in allStudent %}
+                                 <tr>
+                                  <th scope="row">{{ data.rollNo }}</th>
+                                  <td>{{ data.rollNo }}</td>
+                                  <td>{{ data.assignment1 }}</td>
+                                  <td>{{ data.assignment2 }}</td>
+                                  <td>{{ data.classtest1 }}</td>
+                                  <td>{{ data.classtest2 }}</td>
+                                  <td>{{ data.midTerm }}</td>
+                                  <td>{{ data.endTerm }}</td>
+                                  <td>{{ data.assignment1  }}+{{ data.assignment2 }}+{{ data.classtest1 }}</td>
+                                </tr>
+                                 {% endfor %}
                                 </tbody>
                             </table>
                         </div>

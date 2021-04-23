@@ -19,19 +19,43 @@ def reportCard(request,usersub):
 
 
 def login(request):
+    error =""
     if request.method == 'POST':
        roll=request.POST['Roll_No']
        global st_id   #st_id is the id of the logged in student used in other templates (until logged out)
        st_id=roll
+       error = ""
        pwd=request.POST['password']
        if Student.objects.filter(roll_no=roll,password=pwd):
+           error += "success"
+           
            return dashboard(request)
-    return render(request,'login.html')
+       else:
+           error +="Try again"
+           
+    return render(request,'login.html',{'error':error})
 
+def loginAsFaculty(request):
+    error =""
+    if request.method == 'POST':
+       Faculty_Id = request.POST['Faculty_Id']
+       global f_id   #f_id is the id of the logged in Faculty used in other templates (until logged out)
+       f_id=Faculty_Id 
+       pwd=request.POST['password']
+       if Faculty.objects.filter(fId=Faculty_Id,password=pwd):
+           error = "success"
+           return facultydashboard(request)
+       else:
+           error +="Try again"
+    return render(request,'loginAsfaculty.html',{'error':error})
 
 def facultydashboard(request):
+    facultyitem = Faculty.objects.get(fId=f_id)
+    subCode = facultyitem.subjectCode
+    allStudent = Subject.objects.filter(subjectCode = subCode)
     alldata=Subject()
-    # if request.method=='POST':
+    
+    
 
-    return render(request,'facultydashboard.html',{'data':alldata})
+    return render(request,'facultydashboard.html',{'data':alldata ,'allStudent':allStudent})
 # Create your views here.
