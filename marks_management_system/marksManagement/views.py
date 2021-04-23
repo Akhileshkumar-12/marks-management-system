@@ -50,12 +50,37 @@ def loginAsFaculty(request):
     return render(request,'loginAsfaculty.html',{'error':error})
 
 def facultydashboard(request):
+    if request.method == 'POST':
+        roll = request.POST['rol']
+        sCode = request.POST['subCode']
+        A1 = request.POST['a1']
+        A2 = request.POST['a2']
+        C1 = request.POST['c1']
+        C2 = request.POST['c2']
+        mT = request.POST['mt']
+        # eT = request.POST['et']
+        # if Subject.objects.get(rollNo=roll,subjectCode=sCode):
+        #     update = Subject.objects.get(rollNo=roll,subjectCode=sCode)
+        #     update.assignment1 = A1
+        #     update.assignment2 = A2
+        #     update.classtest1 = C1
+        #     update.classtest2 = C2
+        #     update.midTerm = mT
+        #     update.endTerm = eT
+        #     update.save()
+        # else:
+        #     error = "error occured!! Try again"
+        #     facultyitem = Faculty.objects.get(fId=f_id)
+        #     subCode = facultyitem.subjectCode
+        #     allStudent = Subject.objects.filter(subjectCode = subCode)
+        #     alldata=Subject()
+        #     st = Student.objects.all()
+       
     facultyitem = Faculty.objects.get(fId=f_id)
     subCode = facultyitem.subjectCode
     allStudent = Subject.objects.filter(subjectCode = subCode)
     alldata=Subject()
-    
-    
-
-    return render(request,'facultydashboard.html',{'data':alldata ,'allStudent':allStudent})
+    st = Student.objects.all()   
+    return render(request,'facultydashboard.html',{'data':alldata ,'allStudent':allStudent,'student':st})
 # Create your views here.
+

@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
+{% load filters %}
 {% block content %}
         <div class="d-flex flex-row mainCard p-0">
             <div class=" col-3  rightCard ml-0 p-0">
@@ -33,45 +34,46 @@
                 <div class="d-flex flex-column d-block justify-content-between align-items-center cards">
                         <div class="m-4 progressCard">
                             
-                            <form>
+                            <form action="{% url 'facultydashboard' %}" method="POST">
+                                {% csrf_token %}
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3 p-1">
                                         <label for="validationDefault02" class="p-1">Enrollement Number</label>
-                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Enrollement Number" value="" required>
+                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Enrollement Number" value="b76" name="rol" required>
                                     </div>
                                     <div class="col-md-6 mb-3 p-1">
                                         <label for="validationDefault02" class="p-1">Subject Code</label>
-                                        <input type="text" class="form-control" id="validationDefault02" placeholder="CSXXX" value="" required>
+                                        <input type="text" class="form-control" id="validationDefault02" placeholder="CSXXX" value="" name="subCode" required>
                                     </div>
                                 
                                 </div>
                                 <div class="form-row">
                                   <div class="col-md-4 mb-3 p-1">
                                     <label for="validationDefault01" class="p-1">Assignment1</label>
-                                    <input type="text" class="form-control" id="validationDefault01" placeholder="Assignment1" value="" required>
+                                    <input type="text" class="form-control" id="validationDefault01" placeholder="Assignment1" value="" name="a1" required>
                                   </div>
                                   <div class="col-md-4 mb-3 p-1">
                                     <label for="validationDefault02" class="p-1">Class test1</label>
-                                    <input type="text" class="form-control" id="validationDefault02" placeholder="Marks obtained in class test " value="" required>
+                                    <input type="text" class="form-control" id="validationDefault02" placeholder="Marks obtained in class test " value="" name="c1" required>
                                   </div>
                                   <div class="col-md-4 mb-3 p-1" >
                                     <label for="validationDefault02" class="p-1">Mid Term</label>
-                                    <input type="text" class="form-control" id="validationDefault02" placeholder="Marks Obtained in Mid term " value="" required>
+                                    <input type="text" class="form-control" id="validationDefault02" placeholder="Marks Obtained in Mid term " value="" name="mt" required>
                                   </div>
                                  
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-4 mb-3 p-1">
                                         <label for="validationDefault02" class="p-1">Assignment2</label>
-                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Assignment2" value="" required>
+                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Assignment2" value="" name="a2" required>
                                     </div>
                                     <div class="col-md-4 mb-3 p-1" >
                                         <label for="validationDefault02" class="p-1">Class Test2</label>
-                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Class Test2" value="" required>
+                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Class Test2" value="" name="c2" required>
                                     </div>
                                     <div class="col-md-4 mb-3 p-1">
                                         <label for="validationDefault02" class="p-1">EndTerm</label>
-                                        <input type="text" class="form-control" id="validationDefault02" placeholder="End Term" value="" required>
+                                        <input type="text" class="form-control" id="validationDefault02" placeholder="End Term" value="" name="et" required>
                                     </div>
                                 </div>
                               
