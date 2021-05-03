@@ -15,9 +15,9 @@
                      </div>
                      <div class="d-flex flex-column justify-content-center align-text-center d-block menu">
                             <p class="menuText p-2"><a href="{% url 'dashboard' %}">DashBoard</a></p>
-                            <p class="menuText p-2"><a href="#">Activities</a></p>
+    
                             <p class="menuText p-2"><a href="{% url 'reportCard' usersub='abc' %}">Report Card</a></p>
-                            <p class="menuText p-2"><a href="#">curriculum</a></p>
+                            
                      </div>
                 </div>
             </div>
@@ -36,8 +36,8 @@
                                 <div class="p-4" style="font-size: 1.5rem; color: black;"> Percentage</div>
                                 <div class="d-flex flex-row align-items-center justify-content-center">
                                     <div class="set-size charts-container">
-                                        <div class="pie-wrapper progress-45 style-2">
-                                           <span class="label">45<span class="smaller">%</span></span>
+                                        <div class="pie-wrapper ">
+                                           <span class="label">{{ totalmarks }}<span class="smaller">%</span></span>
                                             <div class="pie">
                                                  <div class="left-side half-circle"></div>
                                                  <div class="right-side half-circle"></div>
@@ -74,7 +74,7 @@
 
                             <script>
                                 window.onload = function () {
-                                
+                                var data = JSON.parse("{{semdata|escapejs}}");
                                 var chart = new CanvasJS.Chart("chartContainer", {
                                     animationEnabled: true,
                                     theme: "light2",
@@ -85,18 +85,19 @@
                                         type: "line",
                                           indexLabelFontSize: 16,
                                         dataPoints: [
-                                            { y: 450 },
-                                            { y: 414},
-                                            { y: 520, indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
-                                            { y: 460 },
-                                            { y: 450 },
-                                            { y: 500 },
-                                            { y: 480 },
-                                            { y: 480 },
-                                            { y: 410 , indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
-                                            { y: 500 },
-                                            { y: 480 },
-                                            { y: 510 }
+                                            {x:1,y:1},
+                                            {x:2,y:2},
+                                            {x:3,y:3},
+                                            {x:4,y:4},
+                                            {x:5,y:5},
+                                            {x:6,y:6},
+                                            {x:7,y:7},
+                                            {x:8,y:8},
+                                            
+                                            // { y:  , indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+                                            // { y: 500 },
+                                            // { y: 480 },
+                                            // { y: 510 }
                                         ]
                                     }]
                                 });

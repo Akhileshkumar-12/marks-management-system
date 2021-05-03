@@ -7,14 +7,14 @@
                 
                      <!-- <div class="d-flex flex-column justify-content-center align-text-center profile"> -->
                          
-                            <div class="m-5 d-flex align-items-center" style="border-radius:50%;background-color: black; ;height: 35.15649867374005vh;width: 17.476041666666668vw;"><img src="{% static '/media/alokSir.jfif' %}" alt="" class="ml-2" style="border-radius: 50%;height: 33.15649867374005vh;width: 16.276041666666668vw; position: inherit;"></div>
+                        <div class="m-5 d-flex align-items-center" style="border-radius:50%;background-color: black; ;height: 35.15649867374005vh;width: 17.476041666666668vw;"><img src="{% static '/media/alokSir.jfif' %}" alt="" class="ml-2" style="border-radius: 50%;height: 33.15649867374005vh;width: 16.276041666666668vw; position: inherit;"></div>
                          
                          
                          
-                          <div class="mt-2">
-                            <center class="profileText m-3 " style="font-family: 'Montserrat', sans-serif; font-size: 1.875rem;"><h4>{{ faculty.name }}</h4></center>
-                            <center class="profileText m-3" style="font-family: 'Montserrat', sans-serif; font-size: 1.59rem;"><h4>{{ faculty.subjectName }} ({{ faculty.subjectCode }})</h4></center>
-                          </div>
+                        <div class="mt-2">
+                          <center class="profileText m-3 " style="font-family: 'Montserrat', sans-serif; font-size: 1.875rem;"><h4>{{ faculty.name }}</h4></center>
+                          <center class="profileText m-3" style="font-family: 'Montserrat', sans-serif; font-size: 1.59rem;"><h4>{{ faculty.subjectName }} ({{ faculty.subjectCode }})</h4></center>
+                        </div>
                      <!-- </div> -->
                      <!-- <div class="d-flex flex-column justify-content-center align-text-center d-block menu">
                             <p class="menuText p-2"><a href="{% url 'dashboard' %}">DashBoard</a></p>
@@ -112,14 +112,14 @@ $(document).ready(function(){
                                  {% for data in allStudent %}
                                  <tr>
                                   <th scope="row">{{ data.rollNo }}</th>
-                                  <td>{{ data.rollNo }}</td>
+                                  <td>{{ data.name }}</td>
                                   <td>{{ data.assignment1 }}</td>
                                   <td>{{ data.assignment2 }}</td>
                                   <td>{{ data.classtest1 }}</td>
                                   <td>{{ data.classtest2 }}</td>
                                   <td>{{ data.midTerm }}</td>
                                   <td>{{ data.endTerm }}</td>
-                                  <td>{{ data.assignment1  }}+{{ data.assignment2 }}+{{ data.classtest1 }}</td>
+                                  <td>{{ data.total }}</td>
                                 </tr>
                                  {% endfor %}
                                 </tbody>

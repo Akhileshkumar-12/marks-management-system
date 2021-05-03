@@ -166,8 +166,7 @@ color: rgba(255, 255, 255, 0.5);
   position: absolute;
   top: 0;
 }
-.pie-wrapper .label {
-  background: #34495e;
+.pie-wrapper .label {  
   border-radius: 50%;
   bottom: 0.4em;
   color:  #FF6D33;
