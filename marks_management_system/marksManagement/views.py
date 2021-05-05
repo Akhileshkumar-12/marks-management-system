@@ -11,7 +11,7 @@ def dashboard(request):
     # totalmarks/=len(subjectsdata)
     # totalmarks*=100
     # totalmarks=round(totalmarks,2)
-    semdata=Sem_Grade.objects.filter(rollNo=st_id).order_by('-Sem')
+    semdata=Sem_Grade.objects.filter(rollNo=st_id).order_by('Sem')
     sgpa=[]
     for data in semdata:
         sgpa.append(data.sgpa)
@@ -31,7 +31,7 @@ def reportCard(request,usersub):
     st_sub=Subject.objects.filter(rollNo=st_id)
     if usersub=='abc':
         marksdata=Subject.objects.get(rollNo=st_id , subjectCode=st_sub[0].subjectCode)
-        sortedmarksdata=Subject.objects.filter(subjectCode=st_sub[0].subjectCode).order_by('-total')
+        sortedmarksdata=Subject.objects.filter(subjectCode=st_sub[0].subjectCode).order_by('total')
         for i in range(len(sortedmarksdata)):
             if sortedmarksdata[i].rollNo==st_id:
                 k=i
@@ -75,7 +75,7 @@ def reportCard(request,usersub):
             Weightage+=50 
         gradepoint=float(marksdata.total)/20
         sortedmarksdata=Subject.objects.filter(subjectCode=st_sub[0].subjectCode).order_by('-total')
-        print(sortedmarksdata)
+        
         for i in range(len(sortedmarksdata)):
             if sortedmarksdata[i].rollNo==st_id:
                 k=i
@@ -118,12 +118,14 @@ def loginAsFaculty(request):
        pwd=request.POST['password']
        if Faculty.objects.filter(fId=Faculty_Id,password=pwd):
            error = "success"
+           s="abc"
            return facultydashboard(request)
        else:
            error +="Try again"
     return render(request,'loginAsfaculty.html',{'error':error})
 
 def facultydashboard(request):
+    
     if request.method == 'POST':
         roll = request.POST.get('rol')
         sCode = request.POST.get('subCode')
@@ -154,9 +156,9 @@ def facultydashboard(request):
             
     facultyitem = Faculty.objects.get(fId=f_id)
     subCode = facultyitem.subjectCode
-    allStudent = Subject.objects.filter(subjectCode = subCode)
-    for i in range(len(allStudent)):
-        print(allStudent[i].classtest1)
+    allStudent = Subject.objects.filter(subjectCode = subCode).order_by('rollNo')
+    # for i in range(len(allStudent)):
+    #     print(allStudent[i].classtest1)
     alldata=Subject()
     st = Student.objects.all()   
     return render(request,'facultydashboard.html',{'data':alldata ,'allStudent':allStudent,'student':st,'faculty':facultyitem})

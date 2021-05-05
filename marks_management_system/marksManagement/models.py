@@ -16,7 +16,7 @@ class Faculty(models.Model):
     Credit = models.FloatField(default=0.00)
 
     def __str__(self):
-        return self.fId
+        return self.name
 
 class Subject(models.Model):
     rollNo =models.CharField(max_length=8 , unique=False)
