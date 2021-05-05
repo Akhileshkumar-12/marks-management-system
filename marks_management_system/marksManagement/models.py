@@ -36,6 +36,7 @@ class   Sem_Grade(models.Model):
     rollNo= models.CharField(max_length=8 , unique=False)
     Sem= models.FloatField(default=0.00)
     sgpa= models.FloatField(default=0.00)
+    totcredit=models.IntegerField(default=0)
     def __str__(self):
         return self.rollNo+" "+str(self.Sem)
     

@@ -5,15 +5,25 @@ from .models import Student,Faculty,Subject,Sem_Grade
 def dashboard(request):
     st_data=Student.objects.get(roll_no=st_id)
     subjectsdata=Subject.objects.filter(rollNo=st_id)
-    totalmarks=0
-    for i in range(len(subjectsdata)):
-        totalmarks+=(subjectsdata[i].total/200)
-    totalmarks/=len(subjectsdata)
-    totalmarks*=100
-    totalmarks=round(totalmarks,2)
+    # totalmarks=0
+    # for i in range(len(subjectsdata)):
+    #     totalmarks+=(subjectsdata[i].total/200)
+    # totalmarks/=len(subjectsdata)
+    # totalmarks*=100
+    # totalmarks=round(totalmarks,2)
     semdata=Sem_Grade.objects.filter(rollNo=st_id).order_by('-Sem')
+    sgpa=[]
+    for data in semdata:
+        sgpa.append(data.sgpa)
     # semdata=dumps(semdata)
-    return render(request,'NewDashboard.html',{'data':st_data,'totalmarks':totalmarks,'semdata':semdata})
+    totalcredit=0
+    totalgradepoint=0
+    for i in semdata:
+        totalcredit+=i.totcredit
+        totalgradepoint+=(i.sgpa*i.totcredit)
+    cgpa=totalgradepoint/totalcredit
+    cgpa=round(cgpa,2)
+    return render(request,'NewDashboard.html',{'data':st_data,'totalmarks':totalcredit,'semdata':sgpa,'cgpa':cgpa})
 
 
 def reportCard(request,usersub):

@@ -24,7 +24,7 @@
             <div class="col p-0 leftcard ">
                 
                 <div class=" ml-0 d-block d-flex flex-row justify-content-between p-1 headBar">
-                        <div class=" topBar">Dashboard</div>
+                        <div class=" topBar"><a href="{% url 'dashboard' %}">Dashboard</a></div>
                         <div class=" topBar">
                             <a href="" class="href"><img src="{% static '/media/Vector.png' %}" alt=" " class="pb-2 pr-2 topBarImg"></a>
                             <a href=""><img src="{% static '/media/carbon_settings.png' %}" alt="" class="pb-2 pl-2 topBarImg"></a>
@@ -33,11 +33,11 @@
                 <div class="d-flex flex-column d-block justify-content-between align-items-center cards">
                         <div class="m-4 progressCard">
                             <div class="progress1 ">
-                                <div class="p-4" style="font-size: 1.5rem; color: black;"> Percentage</div>
+                                <div class="p-4" style="font-size: 1.5rem; color: black;">Credits Earned</div>
                                 <div class="d-flex flex-row align-items-center justify-content-center">
                                     <div class="set-size charts-container">
                                         <div class="pie-wrapper ">
-                                           <span class="label">{{ totalmarks }}<span class="smaller">%</span></span>
+                                           <span class="label">{{ totalmarks }}</span>
                                             <div class="pie">
                                                  <div class="left-side half-circle"></div>
                                                  <div class="right-side half-circle"></div>
@@ -51,11 +51,11 @@
                             </div>
                             <div class="progressGap"></div>
                             <div class="progress1 ">
-                                <div class="p-4" style="font-size: 1.5rem; color: black;"> Percentile</div>
+                                <div class="p-4" style="font-size: 1.5rem; color: black;"> CGPA</div>
                                 <div class="d-flex flex-row align-items-center justify-content-center">
                                     <div class="set-size charts-container">
-                                        <div class="pie-wrapper progress-45 style-2">
-                                           <span class="label">45<span class="smaller">%</span></span>
+                                        <div class="pie-wrapper  style-2">
+                                           <span class="label">{{ cgpa }}</span>
                                             <div class="pie">
                                                  <div class="left-side half-circle"></div>
                                                  <div class="right-side half-circle"></div>
@@ -69,42 +69,38 @@
                             </div>
                         </div>
                         <div class="graphs align-items-center">
-                            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
-                            <script>
-                                window.onload = function () {
-                                // var data = JSON.parse("{{semdata|escapejs}}");
-                                var chart = new CanvasJS.Chart("chartContainer", {
-                                    animationEnabled: true,
-                                    theme: "light2",
-                                    title:{
-                                        text: "SEMESTER CGPA"
-                                    },
-                                    data: [{        
-                                        type: "line",
-                                          indexLabelFontSize: 16,
-                                        dataPoints: [
-                                            {x:1,y:1},
-                                            {x:2,y:2},
-                                            {x:3,y:3},
-                                            {x:4,y:4},
-                                            {x:5,y:5},
-                                            {x:6,y:6},
-                                            {x:7,y:7},
-                                            {x:8,y:8},
+                            <div id="chartContainer" style="height: 50vh; width: 100%;">
+                                <div class="box flex-wrap" >
+                                    <canvas id="lineChart" style="height: 40vh; width: 100%; position:relative;"></canvas>
+                                  </div>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+                            <script language="JavaScript">
+                                window.onload=function() {
+                                  var data = {
+                                      labels: ["sem1", "sem2", "sem3", "sem4", "sem5", "sem6", "sem7", "sem8"],
+                                      datasets: [
+                                       
+                                          {
+                                              label: "My Second dataset",
+                                              fillColor: "transparent",
+                                              strokeColor: "#FF6D33",
+                                              pointColor: "#FF6D33",
+                                              pointStrokeColor: "mediumseagreen",
+                                              pointHighlightFill: "#fff",
+                                              pointHighlightStroke: "mediumseagreen",
+                                             
+                                              data: {{ semdata|safe }}
                                             
-                                            // { y:  , indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
-                                            // { y: 500 },
-                                            // { y: 480 },
-                                            // { y: 510 }
-                                        ]
-                                    }]
-                                });
-                                chart.render();
-                                
+                                          }
+                                      ]
+                                  };
+                                  var ctx = document.getElementById("lineChart").getContext("2d");
+                                  var options = { };
+                                  var lineChart = new Chart(ctx).Line(data, options);
                                 }
-                            </script>
+                                </script>
+                                
+                                </div>
                         </div>
                 </div>
             </div>
