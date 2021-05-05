@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import Student,Faculty,Subject,Sem_Grade
-from json import dumps
+# from json import dumps
 
 def dashboard(request):
     st_data=Student.objects.get(roll_no=st_id)
@@ -12,7 +12,7 @@ def dashboard(request):
     totalmarks*=100
     totalmarks=round(totalmarks,2)
     semdata=Sem_Grade.objects.filter(rollNo=st_id).order_by('-Sem')
-    semdata=dumps(semdata)
+    # semdata=dumps(semdata)
     return render(request,'NewDashboard.html',{'data':st_data,'totalmarks':totalmarks,'semdata':semdata})
 
 

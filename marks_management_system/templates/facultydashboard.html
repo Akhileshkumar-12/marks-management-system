@@ -3,18 +3,18 @@
 {% load filters %}
 {% block content %}
         <div class="d-flex flex-row mainCard p-0">
-            <div class="col-3 d-flex flex-column jusify-content-center align-items-center" style="border-left: 2px solid black; background-color: #EF3B3A;">
+            <div class="col-3 d-flex flex-column jusify-content-center align-items-center" style="border-left: 2px solid black; background-color: #E6E6FA;">
                 
                      <!-- <div class="d-flex flex-column justify-content-center align-text-center profile"> -->
                          
-                        <div class="m-5 d-flex align-items-center" style="border-radius:50%;background-color: black; ;height: 35.15649867374005vh;width: 17.476041666666668vw;"><img src="{% static '/media/alokSir.jfif' %}" alt="" class="ml-2" style="border-radius: 50%;height: 33.15649867374005vh;width: 16.276041666666668vw; position: inherit;"></div>
+                           <img src="{% static '/media/facultyImg.jfif' %}" alt="" class="ml-2 mt-5" style="border-radius: 2%;height: 35vh;width: 15vw; position: inherit;">
                          
                          
                          
-                        <div class="mt-2">
-                          <center class="profileText m-3 " style="font-family: 'Montserrat', sans-serif; font-size: 1.875rem;"><h4>{{ faculty.name }}</h4></center>
-                          <center class="profileText m-3" style="font-family: 'Montserrat', sans-serif; font-size: 1.59rem;"><h4>{{ faculty.subjectName }} ({{ faculty.subjectCode }})</h4></center>
-                        </div>
+                         <div class="mt-2">
+                            <center class="profileText m-3 mt-4 " style="font-family: 'Montserrat', sans-serif; font-size: 1.875rem; color:#36454F"><h4>{{ faculty.name }}</h4></center>
+                            <center class="profileText m-3 mt-5" style="font-family: 'Montserrat', sans-serif; font-size: 1.2rem; color:#36454F"><h4>{{ faculty.subjectName }} ({{ faculty.subjectCode }})</h4></center>
+                          </div>
                      <!-- </div> -->
                      <!-- <div class="d-flex flex-column justify-content-center align-text-center d-block menu">
                             <p class="menuText p-2"><a href="{% url 'dashboard' %}">DashBoard</a></p>
@@ -41,7 +41,7 @@
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3 p-1">
                                         <label for="validationDefault02" class="p-1">Enrollement Number</label>
-                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Enrollement Number" value="b76" name="rol" required>
+                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Enrollement Number" value="" name="rol" required>
                                     </div>
                                     <div class="col-md-6 mb-3 p-1">
                                         <label for="validationDefault02" class="p-1">Subject Code</label>
@@ -83,16 +83,7 @@
                             </form>
                             
                         </div>
-                        <button id="addNew" class="btn btn-primary">add new element</button>
-
-                     
-<script>
-$(document).ready(function(){
-  $("#addNew").click(function(){
-    $("#formAddNew").css("display", "block");
-  });
-});
-</script>
+                    
                         <div class="col-11 m-4 progressCard">
                             <table class="table table-striped table-hover">
                                 <thead class="thead-dark">
@@ -112,7 +103,7 @@ $(document).ready(function(){
                                  {% for data in allStudent %}
                                  <tr>
                                   <th scope="row">{{ data.rollNo }}</th>
-                                  <td>{{ data.name }}</td>
+                                  <td>{{ data.rollNo }}</td>
                                   <td>{{ data.assignment1 }}</td>
                                   <td>{{ data.assignment2 }}</td>
                                   <td>{{ data.classtest1 }}</td>
@@ -125,6 +116,17 @@ $(document).ready(function(){
                                 </tbody>
                             </table>
                         </div>
+
+                        <button id="addNew" class="btn btn-primary" style="position:relative; left:400px;">Modify</button>
+
+                     
+                        <script>
+                        $(document).ready(function(){
+                          $("#addNew").click(function(){
+                            $("#formAddNew").css("display", "block");
+                          });
+                        });
+                        </script>
                 </div>
             </div>
         </div>
@@ -137,4 +139,3 @@ $(document).ready(function(){
          <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
 {% endblock %}
-
