@@ -28,9 +28,11 @@ A content management system that is used to store the marks of students and main
 
 ### Technology Used
 1. [Django](https://www.djangoproject.com/)
-2. [MySQL](https://www.mysql.org)
-3. [Bootstrap](https://getbootstrap.com/)
-4. [JQuery](https://jquery.com/)
+2. [HTML]()
+3. [CSS]()
+4. [JS]()
+5. [Bootstrap](https://getbootstrap.com/)
+6. [MySQL](https://www.mysql.com)
 
 ## Features
 
@@ -62,17 +64,17 @@ python3 manage.py runserver
 ## Operation
 ## Folder Structures
 ```
-├───components
+├───marksManagement
 │   ├───button
 │   └───navbar    
-├───pages
-├───css
-├───fonts
-├───img
+├───marks_management_system
+├───static
+├───templates
 │   ├───dashboard
 │   ├───favicon
-│   └───report_card
-└───js
+│   └───report_card    
+├───db.sqlite3    
+├───manage.py
 ```
 ## Project Notes
 ## Design Notes
