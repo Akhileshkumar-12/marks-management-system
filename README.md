@@ -60,7 +60,6 @@ python3 manage.py runserver
 4. Visit http://127.0.0.1:8000/ in a web browser.
 5. Quit the server with CONTROL-C in terminal
 
-## Configuration
 ## Operation
 ## Folder Structures
 ```
