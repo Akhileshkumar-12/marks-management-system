@@ -20,7 +20,6 @@ A content management system that is used to store the marks of students and main
 - [Technology Used](#technology-used)
 - [Features](#features)
 - [Setup in local machine](#setup-in-local-machine)
-- [Configuration](#configuration)
 - [Operation](#operation)
 - [Folder Structures](#folder-structures)
 
