@@ -19,7 +19,7 @@ A content management system that is used to store the marks of students and main
 # Table of Contents
 - [Technology Used](#technology-used)
 - [Features](#features)
-- [Setup in local machine](#setup-in-local-machine)
+- [Setup in local machine](#setup-in-Local-Machine)
 - [Operation](#operation)
 - [Folder Structures](#folder-structures)
 
@@ -36,7 +36,7 @@ A content management system that is used to store the marks of students and main
 2. Add and managing marks of students by Admin.
 3. Viewing a compiled reportcard by the Student.
 
-## Setup in local machine
+## Setup in Local Machine
 
 Let assume our project name will be djangodemo
 
