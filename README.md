@@ -35,7 +35,7 @@ A content management system that is used to store the marks of students and main
 6. [MySQL](https://www.mysql.com)
 
 ## Features
-
+Allows faculty/admin to store and manage marks of students in a database. While allowing students to view their marks as well.
 
 ## Setup in local machine
 
