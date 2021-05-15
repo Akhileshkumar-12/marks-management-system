@@ -29,6 +29,7 @@ def dashboard(request):
 def reportCard(request,usersub):
     st_data=Student.objects.get(roll_no=st_id)
     st_sub=Subject.objects.filter(rollNo=st_id)
+    print(st_sub[0])
     if usersub=='abc':
         marksdata=Subject.objects.get(rollNo=st_id , subjectCode=st_sub[0].subjectCode)
         sortedmarksdata=Subject.objects.filter(subjectCode=st_sub[0].subjectCode).order_by('total')
@@ -73,8 +74,8 @@ def reportCard(request,usersub):
             Weightage+=25
         if marksdata.endTerm!=0:
             Weightage+=50 
-        gradepoint=float(marksdata.total)/20
-        sortedmarksdata=Subject.objects.filter(subjectCode=st_sub[0].subjectCode).order_by('-total')
+        gradepoint=float(marksdata.total)//20
+        sortedmarksdata=Subject.objects.filter(subjectCode=usersub).order_by('total')
         
         for i in range(len(sortedmarksdata)):
             if sortedmarksdata[i].rollNo==st_id:
