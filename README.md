@@ -16,7 +16,7 @@
 # Students marks information system
 A content management system that is used to store the marks of students and maintain it. Instructors can store and edit the marks under their courses, while students can view the marks marks and sgpa of specific semester, and also their overall cgpa.
 
-[Student marks information sytem](http://sudha6567kumari.pythonanywhere.com/admin/)
+[Student marks information sytem](http://sudha6567kumari.pythonanywhere.com/) - For Students
 
 # Table of Contents
 - [Technology Used](#technology-used)
